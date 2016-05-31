@@ -1,4 +1,1 @@
-reddit-clone
-============
-
-The code for the Reddit Clone.
+The code for the Reddit Clone found on youTube, by Henry Kaufman, using Firebase.

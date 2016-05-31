@@ -1,4 +1,4 @@
-//Made by Henry Kaufman
+//Org code by Henry Kaufman
 var app = angular.module('reddit-clone', ['ngRoute', 'firebase']);
 
 //The Firebase URL set as a Constant
@@ -49,8 +49,8 @@ app.controller('MainController', function ($scope, $firebase, Posts) {
             post.description = "";
             post.url = "";
         } else {
-            //An alert to tell the user to log in or put something in all the fields
-            alert('Sorry bro, you need all of those inputs to be filled or you need to be logged in!')
+            //An alert
+            alert('Please complete all inputs, or logged in.')
         }
     }
 
@@ -80,7 +80,7 @@ app.controller('MainController', function ($scope, $firebase, Posts) {
                 text: comment.text
             });
         } else {
-            alert('You need to be logged in before doing that!')
+            alert('Please log in, so that you can post comments.')
         }
         
         comment.text = "";
@@ -99,7 +99,7 @@ app.controller('MainController', function ($scope, $firebase, Posts) {
         ref.authWithOAuthPopup('twitter', function (error, authData) {
             //If there is an error
             if (error) {
-                alert('Sorry bro, there was an error.');
+                alert('There was an error.');
             }
             //If the user is logged in correctly
             else {
